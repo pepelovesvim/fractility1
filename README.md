@@ -26,7 +26,7 @@ The signal is constructed by taking the top/bottom 2 exchanges ranked via total 
 Manually downloaded data from https://www.cryptodatadownload.com/data/
 
 ## Results
-Given the chart below, we see that the strategy is indeed profitable (ignoreing slippage and transaction costs).
+Given the chart below, we see that the strategy is indeed profitable (ignoring slippage and transaction costs).
 Moreoever, we see that increasing lag time (how long we lag the signal) strongly implies a reduction in PnL. This observation provides a validation of the strat.
 
 ![alt text](image.png)
