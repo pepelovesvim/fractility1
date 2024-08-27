@@ -31,7 +31,7 @@ _date_lowerb = (
     .aggregate('max("min(date)")')
     .fetchone()
 )
-assert _date_lowerb is not None and isinstance(_date_lowerb[0], datetime.datetime)
+assert _date_lowerb is not None and isinstance(_date_lowerb[0], datetime)
 date_lowerb = _date_lowerb[0]
 
 duckdb.view("_OHLC").filter(f"date > '{date_lowerb}'").to_view("OHLC")
@@ -130,6 +130,6 @@ back_tests = pd.concat(pnl(x) for x in [1, 2, 3])
     .properties(
         height=600,
         width=800,
-        title="Total PnL via Exchange Reversion by LagTime, total log returns",
+        title="cumulative PnL via Exchange Reversion by LagTime, log returns",
     )
 )
